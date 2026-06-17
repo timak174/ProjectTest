@@ -13,6 +13,7 @@ public class EmailTest {
 
     @Test
     @DisplayName("Отправить письмо новуму пользователю")
+    // Название метода.
     void emailShouldBeSentForNewUser() {
         System.out.println("Hi Artem");
     }
