@@ -22,7 +22,7 @@ public class WebTest {
     @Test
     @Tag("BLOCKER")
     //Важность выражается через TAG
-    @DisplayName("Для поискового запроса должен отправляться не пустой список")
+    @DisplayName("Для поискового запроса должен 'selenoide' отправляться не пустой список")
     // Название кейса.
     void successfulSearchTest(){
         //Шаги
@@ -34,6 +34,17 @@ public class WebTest {
         //4.Совершить действие .pressEnter()
         $$("[data-testid='result'] li[data-layout='organic']").shouldBe();
         //Ожидаемой Результат = списко данных
+
+    }
+    @Test
+    @Tag("BLOCKER")
+    @DisplayName("Для поискового запроса должен 'selenoide' отправляться не пустой список фото")
+    void successfulSearchPhotoTest(){
+        open("https://duckduckgo.com/");
+        $("#searchbox_input").setValue("selenoide").pressEnter();
+        $("[class='kFFXe30DOpq5j1hbWU1q SnptgjT2zdOhGYfNng6g wZ4JdaHxSAhGy1HoNVja d26Geqs1C__RaCO7MUs2']").click();
+        $$("SZ76bwIlqO8BBoqOLqYV").shouldBe();
+
 
     }
 }
