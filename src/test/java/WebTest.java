@@ -48,7 +48,7 @@ public class WebTest {
     @DisplayName("Для поискового запроса должен 'selenide' отправляться не пустой список фото")
     void successfulSearchPhotoTest(){
         //open("https://duckduckgo.com/");
-        $("#searchbox_input").setValue("selenoide").pressEnter();
+        $("#searchbox_input").setValue("selenide").pressEnter();
         $("[class='kFFXe30DOpq5j1hbWU1q SnptgjT2zdOhGYfNng6g wZ4JdaHxSAhGy1HoNVja d26Geqs1C__RaCO7MUs2']").click();
         $$("SZ76bwIlqO8BBoqOLqYV").shouldBe();
 
